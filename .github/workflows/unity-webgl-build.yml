@@ -18,6 +18,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Activate Unity License
+      - name: Activate Unity License
+        uses: game-ci/unity-activate@v2
+        with:
+          unityLicense: ${{ secrets.UNITY_LICENSE }}
+
       # Set up Unity with the specified version
       - name: Set Up Unity
         uses: game-ci/unity-builder@v2
