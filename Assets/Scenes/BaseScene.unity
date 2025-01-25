@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -224,7 +225,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -250,12 +251,27 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c137334f14b4d528889b16d0ff21c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1385815255}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: -15}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +456,7 @@ GameObject:
   - component: {fileID: 1385815257}
   - component: {fileID: 1385815256}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,6 +544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fe5fcee55614b949ba0cb8c7efa64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  dashSpeed: 20
+  dashDuration: 0.2
+  dashCooldown: 0
 --- !u!50 &1385815257
 Rigidbody2D:
   serializedVersion: 5
