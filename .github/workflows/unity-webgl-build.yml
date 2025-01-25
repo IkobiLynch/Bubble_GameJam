@@ -11,7 +11,7 @@ on:
 jobs:
   build-webgl:
     name: Build WebGL Project
-    runs-on: macos-latest  # macOS environment for compatibility
+    runs-on: ubuntu-latest  # macOS environment for compatibility
 
     steps:
       # Checkout the repository
