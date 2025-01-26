@@ -226,5 +226,6 @@ MonoBehaviour:
   fireRate: 0.5
   fireCooldownTimer: 0
   projectilePrefab: {fileID: 3550457324568735606, guid: 0f45d503fc2ea40648415576b28cdbe9, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 15
+  projectileDamage: 80
   pelletCount: 5

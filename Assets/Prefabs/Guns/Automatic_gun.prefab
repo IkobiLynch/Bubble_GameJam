@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3921077984510326285
+--- !u!1 &4155316868676555060
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4037054125914583701}
-  - component: {fileID: 9195067522447202065}
+  - component: {fileID: 7760264298959276613}
+  - component: {fileID: 5399340918709049773}
   m_Layer: 0
   m_Name: ShootPoint
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4037054125914583701
+--- !u!4 &7760264298959276613
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3921077984510326285}
+  m_GameObject: {fileID: 4155316868676555060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 0.32000002, y: 0.16000001, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1509294052607265320}
+  m_Father: {fileID: 7667218213035926610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9195067522447202065
+--- !u!212 &5399340918709049773
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3921077984510326285}
+  m_GameObject: {fileID: 4155316868676555060}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7899092791648675291
+--- !u!1 &4477935543790299844
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,8 +95,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5478694469949912921}
-  - component: {fileID: 5112057801131370436}
+  - component: {fileID: 1554439079833877030}
+  - component: {fileID: 7121007042838282745}
   m_Layer: 0
   m_Name: GunRenderer
   m_TagString: Untagged
@@ -104,28 +104,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5478694469949912921
+--- !u!4 &1554439079833877030
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899092791648675291}
+  m_GameObject: {fileID: 4477935543790299844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.4, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1509294052607265320}
+  m_Father: {fileID: 7667218213035926610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5112057801131370436
+--- !u!212 &7121007042838282745
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899092791648675291}
+  m_GameObject: {fileID: 4477935543790299844}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8784314, g: 0.2588236, b: 0.78754324, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8829306806184744120
+--- !u!1 &8787480633431330398
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,49 +182,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1509294052607265320}
-  - component: {fileID: 9149215945047073118}
+  - component: {fileID: 7667218213035926610}
+  - component: {fileID: 8196624797688405195}
   m_Layer: 0
-  m_Name: Onepop_gun
+  m_Name: Automatic_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1509294052607265320
+--- !u!4 &7667218213035926610
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8829306806184744120}
+  m_GameObject: {fileID: 8787480633431330398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.016314823}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5478694469949912921}
-  - {fileID: 4037054125914583701}
+  - {fileID: 1554439079833877030}
+  - {fileID: 7760264298959276613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9149215945047073118
+--- !u!114 &8196624797688405195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8829306806184744120}
+  m_GameObject: {fileID: 8787480633431330398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 571385868957445649d7a4a9692e9203, type: 3}
+  m_Script: {fileID: 11500000, guid: 839f70e4d5dd24a1e879ae35d5c6a87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunName: One pop
-  spriteRenderer: {fileID: 5112057801131370436}
-  shootPoint: {fileID: 4037054125914583701}
-  fireRate: 0.3
+  gunName: Bubblebrawta
+  spriteRenderer: {fileID: 7121007042838282745}
+  shootPoint: {fileID: 7760264298959276613}
+  fireRate: 0.05
   fireCooldownTimer: 0
   projectilePrefab: {fileID: 3550457324568735606, guid: 0f45d503fc2ea40648415576b28cdbe9, type: 3}
-  projectileSpeed: 10
-  projectileDamage: 50
+  projectileSpeed: 20
+  projectileDamage: 65
+  pelletCount: 5
