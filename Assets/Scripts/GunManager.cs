@@ -6,7 +6,7 @@ public class GunManager : MonoBehaviour
     public Transform gunHolder; // Where the gun is attached to the player
     public Gun startingGun; // Default gun to equip at the start
 
-    private Gun currentGun;
+    [SerializeField] private Gun currentGun;
 
     public void Initialize()
     {
