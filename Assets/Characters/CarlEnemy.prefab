@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4243483583616972446}
   - component: {fileID: 1283068771460046403}
   - component: {fileID: -4596259540242379382}
+  - component: {fileID: -7660502228760130960}
   m_Layer: 0
   m_Name: CarlEnemy
   m_TagString: Untagged
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4391829753868021870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 479f0a76ce8f547ce88381f8b425b918, type: 3}
   m_Name: 
@@ -170,7 +171,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4391829753868021870}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -193,12 +194,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!61 &-4596259540242379382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4391829753868021870}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -245,3 +246,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7660502228760130960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391829753868021870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ba6c6c5a685479a867856dab322f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseRange: 100
+  upSprite: {fileID: 3261295310878011889, guid: 57ab64e77e14041a5899398dc55226bb, type: 3}
+  downSprite: {fileID: 4846063603486856047, guid: 6886f6b33bed14c00babefa758ffdc43, type: 3}
+  leftSprite: {fileID: -3838038408842314309, guid: 08c175c72ddb04be9aaae1498507d5fa, type: 3}
+  rightSprite: {fileID: 8838326789651277391, guid: 58af3b7246f524063b8c33a686612bcd, type: 3}
