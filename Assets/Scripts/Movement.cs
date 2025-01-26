@@ -1,28 +1,35 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    private float speed =5f; 
-    [SerializeField]
-    private float dashSpeed = 20f;
-    [SerializeField]
-    private float dashDuration = 0.2f; // Duration of dash
-    [SerializeField]
-    private float dashCooldown = 0f; // Time between dashes
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.2f; // Duration of dash
+    [SerializeField] private float dashCooldown = 0f; // Time between dashes
 
     private Vector2 movementInput; // Store movement input
-    private Rigidbody2D rb; //rigidbody reference
+    private Rigidbody2D rb; // Rigidbody reference
 
     private PlayerControls controls; // Input system reference
 
     private bool isDashing = false; // Tracks if the player is dashing
     private float dashCooldownTimer = 0f; // Timer for dash cooldown
-    private void Awake(){
-        //Initialzie Input
+
+    [Header("Audio Settings")]
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip footstepSound; // Footstep sound clip
+    public float footstepInterval = 0.5f; // Time between footsteps
+    private float footstepTimer;
+
+    public AudioClip dashSound; // Dash sound clip
+
+    private void Awake()
+    {
+        // Initialize Input
         controls = new PlayerControls();
 
-        //Get rigidbody2d 
+        // Get Rigidbody2D 
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -56,6 +63,21 @@ public class Movement : MonoBehaviour
             rb.linearVelocity = movementInput * speed;
         }
 
+        // Play footstep sounds while moving
+        if (movementInput.magnitude > 0 && !isDashing)
+        {
+            footstepTimer -= Time.fixedDeltaTime;
+            if (footstepTimer <= 0)
+            {
+                PlayFootstepSound();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0; // Reset the timer if not moving
+        }
+
         // Decrease the dash cooldown timer
         if (dashCooldownTimer > 0)
         {
@@ -68,7 +90,7 @@ public class Movement : MonoBehaviour
         // Read movement input (Vector2)
         movementInput = context.ReadValue<Vector2>();
     }
-    
+
     private void OnDashInput(InputAction.CallbackContext context)
     {
         // Perform a dash if not already dashing and cooldown is complete
@@ -82,6 +104,9 @@ public class Movement : MonoBehaviour
     {
         isDashing = true;
         Vector2 dashDirection = movementInput.normalized;
+
+        // Play dash sound
+        PlayDashSound();
 
         // Apply dash velocity
         rb.linearVelocity = dashDirection * dashSpeed;
@@ -97,4 +122,19 @@ public class Movement : MonoBehaviour
         dashCooldownTimer = dashCooldown;
     }
 
+    private void PlayFootstepSound()
+    {
+        if (audioSource != null && footstepSound != null)
+        {
+            audioSource.PlayOneShot(footstepSound);
+        }
+    }
+
+    private void PlayDashSound()
+    {
+        if (audioSource != null && dashSound != null)
+        {
+            audioSource.PlayOneShot(dashSound);
+        }
+    }
 }
