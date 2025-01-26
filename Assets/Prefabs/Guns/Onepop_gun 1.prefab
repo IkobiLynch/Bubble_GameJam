@@ -51,8 +51,9 @@ MonoBehaviour:
   shootPoint: {fileID: 8121714201458997457}
   fireRate: 0.5
   fireCooldownTimer: 0
-  projectilePrefab: {fileID: 3550457324568735606, guid: 0f45d503fc2ea40648415576b28cdbe9, type: 3}
-  projectileSpeed: 10
+  projectilePrefab: {fileID: 3550457324568735606, guid: 9bd6241a70e46455f8a7d5520bd891d4, type: 3}
+  projectileSpeed: 15
+  projectileDamage: 20
 --- !u!1 &1086052319232717103
 GameObject:
   m_ObjectHideFlags: 0

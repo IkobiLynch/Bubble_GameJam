@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour, IDamageable
     public void Die()
     {
         Debug.Log("Player has died!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
         // Add respawn or game over logic here
     }
 

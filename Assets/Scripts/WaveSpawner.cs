@@ -55,8 +55,8 @@ public class WaveSpawner : MonoBehaviour
     for (int i = 0; i < enemyCount; i++)
     {
         // Generate random positions within a range
-        float randomX = Random.Range(-10f, 10f); // Replace -10 and 10 with your desired range
-        float randomZ = Random.Range(-10f, 10f); // Adjust as needed
+        float randomX = Random.Range(-30f, 30f); // Replace -10 and 10 with your desired range
+        float randomZ = Random.Range(-30f, 30f); // Adjust as needed
         Vector3 randomPosition = new Vector3(randomX, 0, randomZ);
 
         // Spawn enemy at the random position
