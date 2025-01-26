@@ -19,8 +19,8 @@ public class Gun : MonoBehaviour, IGun
     public GameObject projectilePrefab;
     [SerializeField]
     public float projectileSpeed = 10f;
-    [SerializeField]
-    
+
+    [SerializeField] private float projectileDamage = 10f;
 
     public void Initialize()
     {
@@ -34,7 +34,7 @@ public class Gun : MonoBehaviour, IGun
         if (projectilePrefab != null && shootPoint != null)
         {
             GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
-            projectile.GetComponent<IProjectile>()?.Initialize(direction, projectileSpeed, 10f); 
+            projectile.GetComponent<IProjectile>()?.Initialize(direction, projectileSpeed, projectileDamage); 
         }
 
         // Reset fire cooldown

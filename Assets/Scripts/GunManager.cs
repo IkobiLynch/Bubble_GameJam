@@ -4,9 +4,9 @@ public class GunManager : MonoBehaviour
 {
     [Header("Gun Settings")]
     public Transform gunHolder; // Where the gun is attached to the player
-    public Gun startingGun; // Default gun to equip at the start
+    public GameObject startingGun; // Default gun to equip at the start
 
-    public Gun currentGun;
+    public GameObject currentGun;
     [SerializeField] private SpriteRenderer gunSpriteRenderer;
 
     public void Initialize()
@@ -20,16 +20,13 @@ public class GunManager : MonoBehaviour
             gunHolder = transform.Find("GunHolder");
         }
 
-        if (gunSpriteRenderer == null){
-            gunSpriteRenderer = currentGun.GetSpriteRenderer();
-        }
     }
 
     public void Start(){
         
     }
 
-    public void EquipGun(Gun newGun)
+    /*public void EquipGun(Gun newGun)
     {
         if (newGun == null) return;
 
@@ -42,13 +39,28 @@ public class GunManager : MonoBehaviour
             currentGun.GetSpriteRenderer().sprite = newGun.GetSpriteRenderer().sprite;
         }
 
+    } */
+
+    public void EquipGun(GameObject newGunPrefab)
+    {
+        if (newGunPrefab == null) return;
+        
+        foreach (Transform child in gunHolder)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Swap gun script
+        currentGun = Instantiate(newGunPrefab, gunHolder.position, gunHolder.rotation, gunHolder);
+
     }
 
     public void Shoot(Vector2 direction)
     {
         if (currentGun != null)
         {
-            currentGun.Shoot(direction);
+            Gun currentGunScript = currentGun.GetComponent<Gun>();
+            currentGunScript.Shoot(direction);
         }
     }
 }
