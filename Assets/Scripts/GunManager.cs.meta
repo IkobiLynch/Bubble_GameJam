@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: b2f841debc0cc47b2bb12bcf616762c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gunHolder: {fileID: 1509294052607265320, guid: e2232a17cda414e6ba16f4df2e002209, type: 3}
+  - startingGun: {fileID: 9149215945047073118, guid: e2232a17cda414e6ba16f4df2e002209, type: 3}
+  - currentGun: {instanceID: 0}
+  - gunSpriteRenderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
