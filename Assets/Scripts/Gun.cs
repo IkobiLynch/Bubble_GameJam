@@ -5,18 +5,27 @@ public class Gun : MonoBehaviour, IGun
     [Header("Gun Properties")]
     [SerializeField]
     public string gunName;
-    [SerializeField]
-    public GameObject projectilePrefab;
+    
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    
     [SerializeField]
     public Transform shootPoint; // Spawn point for projectiles
-    [SerializeField]
-    public float projectileSpeed = 10f;
-    [SerializeField]
     public float fireRate = 0.5f; // Time between shots
 
     [SerializeField]
     protected float fireCooldownTimer = 0f;
+    
+    [Header("Prefab Properties")]
+    public GameObject projectilePrefab;
+    [SerializeField]
+    public float projectileSpeed = 10f;
+    [SerializeField]
+    
 
+    public void Initialize()
+    {
+        Transform gunImageTransform = this.transform.Find("GunImage");  
+    }
     public virtual void Shoot(Vector2 direction)
     {
         if (fireCooldownTimer > 0) return;
@@ -43,5 +52,9 @@ public class Gun : MonoBehaviour, IGun
     public string GetGunName()
     {
         return gunName;
+    }
+
+    public SpriteRenderer GetSpriteRenderer(){
+        return this.spriteRenderer;
     }
 }
