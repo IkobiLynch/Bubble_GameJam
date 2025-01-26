@@ -1,25 +1,23 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class Player : MonoBehaviour, IDamageable
 {
+    private PlayerControls controls; // Input system reference
+
     [Header("Health Settings")]
     [SerializeField]
     private float maxHealth = 100f;
     [SerializeField]
     private float currentHealth;
 
-    [Header("Gun System")]
-    public GunManager gunManager;
-    private Vector2 shootDirection;
+    
+
     private void Awake()
     {
-        currentHealth = maxHealth;
+        controls = new PlayerControls();
 
-        // Initialize the GunManager with the default gun
-        if (gunManager != null)
-        {
-            gunManager.Initialize();
-        }
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(float damage)
@@ -39,19 +37,10 @@ public class Player : MonoBehaviour, IDamageable
         // Add respawn or game over logic here
     }
 
-    // Called by the Input System when the "Shoot" action is performed
-    public void OnShoot(InputAction.CallbackContext context)
+    private void Update()
     {
-        if (context.performed && gunManager != null)
-        {
-            gunManager.Shoot(shootDirection);
-        }
+        
     }
 
-    // Called by the Input System when the "Aim" action is performed
-    public void OnAim(InputAction.CallbackContext context)
-    {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        shootDirection = (mousePosition - (Vector2)transform.position).normalized;
-    }
+
 }
