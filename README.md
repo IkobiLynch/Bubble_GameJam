@@ -5,7 +5,7 @@ This year’s theme was **“Bubbles”**, and we dove deep into a whimsical, ac
 
 ## 🎮 Game Concept
 
-In *Bubbles and the Fury*, you play as a sentient bubble navigating a surreal and chaotic realm filled with enemies, hazards, and time-based challenges. Your bubble’s powers are limited—but clever movement and timely dodging are your only chances to survive the fury.
+In *Bubbles and the Fury*, you play as a shooter navigating chaotic realm filled with enemies, hazards, and time-based challenges. Your powers are changed by picking up different weapons that spawn during play. Get stuck in a spot? Use the dash to escape tight situations and survive the fury. 
 
 ##  Technologies Used
 
